@@ -1,0 +1,53 @@
+<!doctype html>
+
+<body bgcolor="#CCFFCC">
+
+<h3>2019 Film Search</h3>  
+
+<form action="/results" name="search" method="post">
+  Query:
+  <input type="text" name="query" size=50 value="{{ orig_query }}">
+  <input type="submit" value="Search">
+  <input type="hidden" name="page_num" value="1">
+
+</form>
+  
+<h1>Search Results:</h1>
+
+{# Display unknown words if they appear in the query. #}
+{% if unknown_terms != []: %}
+<h5>Your query contained word(s) not found in the corpus: {{ unknown_terms }}</h5>
+<h5>Total hits: 0<br></h5>
+{% else: %}
+
+{# Display stopwords if they appear in the query. #}
+{% if skipped_words != []: %}
+<h5>Ignoring stopword(s): {{ skipped_words }}</h5>
+{% endif %}
+
+<h5>Total hits: {{ total_hits }}<br></h5>
+
+<ol>
+    {% for i in range(len) %}
+
+    {# Make the list item value indicate the number of the nth result #}
+    {# Each member of movie_results variable contains the doc_id, movie title, 
+       and abstract, as returned by dummy_movie_snippet. 
+       Include a link to a url containing the doc_id as a parameter: /movie_data/<doc_id>
+       Use the title as the anchor text for the link.
+       Follow this with the abstract text.
+       Note that in the flask template language, you can use "." to access attributes of a variable, 
+       similar to the python [i]. #}
+
+    	<li value="{{ (srpn-1)*10 + i + 1 }}"><h4><a href="/movie_data/{{ movie_results[i].0 }}">{{ movie_results[i].1 }}</a></h4></li>
+	<ul><li>{{ movie_results[i].2 }}</li></ul>
+    {% endfor %}
+</ol>
+
+<form action="/results" name="next" method="post">
+  <input type="hidden" name="query", value="{{ orig_query }}">
+  <input type="submit" value="Next">
+  <input type="hidden" name="page_num" value="{{ srpn + 1 }}" >
+</form>
+{% endif %}
+</body>

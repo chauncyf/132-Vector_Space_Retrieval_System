@@ -1,0 +1,21 @@
+<!doctype html>
+
+<body bgcolor="#E6E6FA">
+
+<title>2019 Movie Search</title>
+
+<h3>2019 Film Search</h3>
+
+{# Use a form to prompt the user for a query.  Send the data to the server using the POST method.
+   The value of action is the path for the url that will be returned #}
+<form action="results" name="search" method="post">
+  Query:
+  <input type="text" name="query" size=50>
+  <input type="submit" value="Search">
+
+  {# Use a hidden variable called page_num to track the result page number.
+     We will increment this when the next button is selected. #}
+  <input type="hidden" name="page_num" value="1">
+</form>
+
+</body>
