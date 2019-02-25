@@ -19,12 +19,15 @@ To learn flask, see flask tutorial in https://www.tutorialspoint.com/flask/index
 """
 
 from flask import Flask, render_template, request
-from boolean_search import dummy_search, dummy_movie_data, dummy_movie_snippet
+from flask_bootstrap import Bootstrap
+from boolean_search import dummy_search, dummy_movie_data, dummy_movie_snippet, get_term_dict
 
 # Create an instance of the flask application within the appropriate namespace (__name__).
 # By default, the application will be listening for requests on port 5000 and assuming the base 
 # directory for the resource is the directory where this module resides.
 app = Flask(__name__)
+Bootstrap(app)
+
 
 # Welcome page
 # Python "decorators" are used by flask to associate url routes to functions.
@@ -51,17 +54,19 @@ def results():
     # Stop words should be stored in persistent storage when building your index,
     # and loaded into your search engine application when the application is started.
     dummy_stop_words = ['a', 'the', 'of']
-    skipped = [ e for e in query_terms if e in dummy_stop_words ]
+    skipped = [e for e in query_terms if e in dummy_stop_words]
 
-    dummy_unknown_terms = ['prince', 'princess']
-    unknown_terms = [e for e in query_terms if e in dummy_unknown_terms]
+    term_dict = get_term_dict()
+    # dummy_unknown_terms = [terms for terms in query_terms if terms not in term_dict]
 
+    unknown_terms = []
+    # unknown_terms = [e for e in query_terms if e in dummy_unknown_terms]
 
     # If your search found any query terms that are not in the index, add them to unknown_terms and
     # render the error_page.
-    #if unknown_terms:
+    # if unknown_terms:
     #    return render_template('error_page.html', unknown_terms=unknown_terms)
-    #else:
+    # else:
     # At this point, your query should contain normalized terms that are not stopwords or unknown.
     movie_ids = dummy_search(query)  # Get a list of movie doc_ids that satisfy the query.
     # render the results page
@@ -69,7 +74,7 @@ def results():
     movie_ids = movie_ids[((page_num - 1) * 10):(page_num * 10)]  # Limit of 10 results per page
     # movie_results = list(map(dummy_movie_snippet, movie_ids))  # Get movie snippets: title, abstract, etc.
     # Using list comprehension:
-    movie_results = [ dummy_movie_snippet(e) for e in movie_ids ]
+    movie_results = [dummy_movie_snippet(e) for e in movie_ids]
     return render_template('results_page.html', orig_query=query, movie_results=movie_results, srpn=page_num,
                            len=len(movie_ids), skipped_words=skipped, unknown_terms=unknown_terms, total_hits=num_hits)
 
@@ -87,9 +92,7 @@ def movie_data(film_id):
 # If this module is called in the main namespace, invoke app.run().
 # This starts the local web service that will be listening for requests on port 5000.
 if __name__ == "__main__":
-
-    app.run(debug = True)
+    app.run(debug=True)
     # While you are debugging, set app.debug to True, so that the server app will reload
     # the code whenever you make a change.  Set parameter to false (default) when you are
     # done debugging.
-

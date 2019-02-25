@@ -2,18 +2,18 @@
 
 <body bgcolor="#CCCCCC">
 
-<h1>{{ data.title }}</h1>
+<h1>{{ data['Title'] }}</h1>
 
 <table>
         <tr>
-          <td>Director: {{ data.director }}</td>
+          <td>Director: {{ ', '.join(data['Director']) }}</td>
 
         </tr>
 	<tr>
-        <td>Location: {{ data.location }}</td>
+        <td>Location: {{ ', '.join(data['Location']) }}</td>
 	</tr>
 	<tr>
-        <td>Text: {{ data.text }}</td>
+        <td>Text: {{ data['Text'] }}</td>
 	</tr>
 	
 </table>
