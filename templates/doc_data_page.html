@@ -1,23 +1,87 @@
 <!doctype html>
 
-<body bgcolor="#CCCCCC">
+<html lang="en" style="background-color: lightgrey">
+<head>
+    <title>2018 Movie Search</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<h1>{{ data['Title'] }}</h1>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
 
-<table>
-        <tr>
-          <td>Director: {{ ', '.join(data['Director']) }}</td>
+<body style="background-color: lightgrey">
 
-        </tr>
-	<tr>
-        <td>Location: {{ ', '.join(data['Location']) }}</td>
-	</tr>
-	<tr>
-        <td>Text: {{ data['Text'] }}</td>
-	</tr>
-	
-</table>
-<br>
-<br>
-(Use browser "back" button to return to search results.)
+<div class="container">
+    <div class="card shadow-lg mx-auto my-5" style="border-radius: 1.5rem !important;">
+        <div class="card-body">
+            <h2 class="card-title text-center mt-4 mb-5">{{ data['Title'][0] }}</h2>
+            <div class="col mx-auto">
+                <table class="table table-borderless">
+                    <tr>
+                        {% if data['Country'] != ['[]'] %}
+                        <th scope="row">Country</th>
+                        <td>{{ ', '.join(data['Country']) }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        {% if data['Director'] != ['[]'] %}
+                        <th scope="row">Director</th>
+                        <td>{{ ', '.join(data['Director']) }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        {% if data['Starring'] != ['[]'] %}
+                        <th scope="row">Starring</th>
+                        <td>{{ ', '.join(data['Starring']) }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        {% if data['Running Time'] != '[]' %}
+                        <th scope="row">Running Time</th>
+                        <td>{{ data['Running Time'] }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        {% if data['Location'] != [] %}
+                        <th scope="row">Location</th>
+                        <td>{{ ', '.join(data['Location']) }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        {% if (data['Language'] != '[]' ) and (data['Language'] != ['[]']) %}
+                        <th scope="row">Language</th>
+                        <td>{{ ', '.join(data['Language']) }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        <th scope="row">Text</th>
+                        <td>{{ data['Text'] }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Categories</th>
+                        <td>{{ ', '.join(data['Categories']) }}</td>
+                    </tr>
+
+                </table>
+                <input type="button" value="Back" onclick="javascript:history.back()"
+                       class="btn btn-primary" style="border-radius: 1.5rem !important;"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
+</html>
