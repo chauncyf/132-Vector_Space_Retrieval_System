@@ -1,1 +1,1 @@
-web: python boolean_query.py
+web: gunicorn boolean_query:app
