@@ -18,6 +18,7 @@ a of
 To learn flask, see flask tutorial in https://www.tutorialspoint.com/flask/index.htm
 """
 
+from os import environ
 import nltk
 from nltk.stem.snowball import SnowballStemmer
 from flask import Flask, render_template, request
@@ -93,9 +94,10 @@ def movie_data(film_id):
 
 # If this module is called in the main namespace, invoke app.run().
 # This starts the local web service that will be listening for requests on port 5000.
-if __name__ == "__main__":
-    # app.run(debug=True)
-    app.run()
-    # While you are debugging, set app.debug to True, so that the server app will reload
-    # the code whenever you make a change.  Set parameter to false (default) when you are
-    # done debugging.
+# if __name__ == "__main__":
+#     app.run(debug=True)
+# app.run()
+# While you are debugging, set app.debug to True, so that the server app will reload
+# the code whenever you make a change.  Set parameter to false (default) when you are
+# done debugging.
+app.run(environ.get('PORT'))
