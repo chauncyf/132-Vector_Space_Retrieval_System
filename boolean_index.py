@@ -29,7 +29,7 @@ def stemming_corpus(movie_corpus):
                      'text': [stemmer.stem(word) for word in nltk.word_tokenize(json_data[index]['Text'])]}
         stemmed_dict[index] = data_dict
 
-    with open('shelve/stemmed_dict.json', 'w') as output_file:
+    with open('static/stemmed_dict.json', 'w') as output_file:
         json.dump(stemmed_dict, output_file)
 
 
@@ -53,7 +53,7 @@ def indexing(stemmed_corpus):
                 if i not in text_index_dict[word]:
                     text_index_dict[word].append(i)
 
-    with open('shelve/posting_list.json', 'w') as output_file:
+    with open('static/posting_list.json', 'w') as output_file:
         json.dump(text_index_dict, output_file)
 
 
@@ -67,7 +67,7 @@ def json_to_shelve(json_file):
     with open(json_file) as f:
         json_data = json.load(f)
 
-    with shelve.open('shelve/posting_list.db') as db:
+    with shelve.open('static/posting_list.db') as db:
         for key, value in json_data.items():
             db[key] = value
 
@@ -90,8 +90,10 @@ def generate_stop_word_shelf():
                   "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so",
                   "than", "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"]
 
-    with shelve.open('shelve/stop_word_list.db') as db:
+    with shelve.open('static/stop_word_list.db') as db:
         db['stop_word'] = stop_words
+    # with open('static/stop_word_list.json') as db:
+    #     db['stop_word'] = stop_words
 
 
 # if __name__ == '__main__':
