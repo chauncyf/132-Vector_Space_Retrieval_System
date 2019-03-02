@@ -100,4 +100,4 @@ def movie_data(film_id):
 # While you are debugging, set app.debug to True, so that the server app will reload
 # the code whenever you make a change.  Set parameter to false (default) when you are
 # done debugging.
-app.run(environ.get('PORT'))
+app.run()

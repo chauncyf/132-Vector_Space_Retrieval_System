@@ -94,8 +94,8 @@ def generate_stop_word_shelf():
         db['stop_word'] = stop_words
 
 
-if __name__ == '__main__':
-    generate_stop_word_shelf()
-    stemming_corpus('corpus/film_corpus.json')
-    indexing('shelve/stemmed_dict.json')
-    json_to_shelve('shelve/posting_list.json')
+# if __name__ == '__main__':
+#     generate_stop_word_shelf()
+#     stemming_corpus('corpus/film_corpus.json')
+#     indexing('shelve/stemmed_dict.json')
+#     json_to_shelve('shelve/posting_list.json')

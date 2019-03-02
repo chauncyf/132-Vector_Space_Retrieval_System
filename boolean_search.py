@@ -51,8 +51,11 @@ def get_term_dict():
 
     :return: dict of terms
     """
+    # f = shelve.open('shelve/posting_list.db')
+    # return [key for key in f.keys()]
     with shelve.open('shelve/posting_list.db') as f:
-        return [key for key in f.keys()]
+        term_dict = [key for key in f.keys()]
+    return term_dict
 
 
 def get_stop_word_dict():
@@ -62,7 +65,8 @@ def get_stop_word_dict():
     :return: dict of stop words
     """
     with shelve.open('shelve/stop_word_list.db') as f:
-        return [word for word in f['stop_word']]
+        word_dict = [word for word in f['stop_word']]
+    return word_dict
 
 
 def dummy_search(query):
