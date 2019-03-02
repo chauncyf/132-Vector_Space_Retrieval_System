@@ -58,7 +58,7 @@ def get_term_dict():
     # with open('static/posting_list.json') as f:
     #     f = json.load(f)
     #     term_dict = [key for key in f.keys()]
-    # return term_dict
+    return term_dict
 
 
 def get_stop_word_dict():
