@@ -27,7 +27,7 @@ from boolean_search import dummy_search, dummy_movie_data, dummy_movie_snippet, 
 # Create an instance of the flask application within the appropriate namespace (__name__).
 # By default, the application will be listening for requests on port 5000 and assuming the base 
 # directory for the resource is the directory where this module resides.
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='')
 term_dict = get_term_dict()
 stop_words = get_stop_word_dict()
 stemmer = SnowballStemmer("english")
