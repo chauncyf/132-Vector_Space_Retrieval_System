@@ -1,1 +1,1 @@
-web: gunicorn boolean_query:app
+web: gunicorn vs_query:app
