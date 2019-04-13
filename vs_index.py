@@ -35,9 +35,9 @@ def stemming_corpus(movie_corpus):
         json.dump(stemmed_dict, output_file)
 
 
-def generage_postings_list(stemmed_corpus):
+def generate_postings_list(stemmed_corpus):
     """
-    generate a postings list from corpus
+    Generate a postings list from corpus
 
     :param stemmed_corpus: stemmed corpus json file
     :return: postings list
@@ -61,10 +61,10 @@ def generage_postings_list(stemmed_corpus):
 
 def cal_tf(stemmed_corpus):
     """
+    Generate a dict of tf
+
     The term frequency tft,d of term t in document d is
     defined as the number of times that t occurs in d.
-    :param stemmed_corpus:
-    :return:
     """
     tf_dict = {}
     with open(stemmed_corpus) as input_file:
@@ -84,9 +84,9 @@ def cal_tf(stemmed_corpus):
 
 def cal_tf_idf(tf_dict, corups):
     """
+    Generate a dict of tf-idf
+
     W(t,d) =log(1+tf(t,d)) ́log10(N/df(t))
-    :param stemmed_corpus:
-    :return:
     """
     tf_idf_dict = {}
     with open(corups) as f:
@@ -96,12 +96,15 @@ def cal_tf_idf(tf_dict, corups):
     for key in tf_dict:
         tf_idf_dict[key] = {}
         for index in tf_dict[key]:
-            tf_idf_dict[key][index] = math.log(1 + tf_dict[key][index]) * math.log10(N / len(tf_dict[key]))
+            tf_idf_dict[key][index] = (1 + math.log(tf_dict[key][index])) * math.log10(N / len(tf_dict[key]))
     with open('shelve/tf_idf_dict.json', 'w') as output_file:
         json.dump(tf_idf_dict, output_file)
 
 
 def tf_idf_normalization(tf_idf_dict, cos_norm_list, stemmed_dict):
+    """
+    Generate a dict of normalized tf-idf
+    """
     tf_idf_norm_dict = {}
     with open(stemmed_dict) as f:
         json_data = json.load(f)
@@ -120,6 +123,9 @@ def tf_idf_normalization(tf_idf_dict, cos_norm_list, stemmed_dict):
 
 
 def cal_cos_norm(tf_idf_dict, stemmed_dict, stop_word_list):
+    """
+    Generate a dict of cos normalized weight
+    """
     with open(stemmed_dict) as f:
         stemmed_dict = json.load(f)
     with open(tf_idf_dict) as f:
@@ -139,23 +145,9 @@ def cal_cos_norm(tf_idf_dict, stemmed_dict, stop_word_list):
         json.dump(cos_norm_list, output_file)
 
 
-def cal_cos_score(query, postings_list, tf_idf_dict, tf_idf_norm_dict, cos_norm_list):
-    scores = {}
-    query_terms = [SnowballStemmer("english").stem(word) for word in nltk.word_tokenize(query.strip())]
-    for term in query_terms:
-        term_postings_list = postings_list[term]
-        for index in term_postings_list:
-            if index not in scores:
-                scores[index] = 0
-            scores[index] += tf_idf_norm_dict[term][index] * tf_idf_dict[term][index]
-    for index in scores:
-        scores[index] /= cos_norm_list[index]
-    return scores
-
-
 def generate_stop_word_shelf():
     """
-    store stop words in a shelve file
+    Generate a stop words shelve file
 
     :return: shelf file
     """
@@ -177,33 +169,33 @@ def generate_stop_word_shelf():
 
 def json_into_shelve(json_file, key_name):
     """
-    trans json file into shelve file
+    Add json file into the shelve
 
-    :param key_name:
-    :param json_file: json file
-    :return: shelve file
+    :param json_file: json file's name
+    :param key_name: name of the key in shelve
     """
     with open(json_file) as f:
         json_data = json.load(f)
     with shelve.open('shelve/shelve.db') as db:
         db[key_name] = json_data
-        # for key, value in json_data.items():
-        #     db[key] = value
 
 
 def generate_shelve_files():
+    """
+    Generate the shelve required for query
+    """
     print('> Loading stop words..')
     generate_stop_word_shelf()
     print('> Stemming corpus..')
     stemming_corpus('corpus/films_corpus.json')
     print('> Generating postings list..')
-    generage_postings_list('shelve/stemmed_dict.json')
+    generate_postings_list('shelve/stemmed_dict.json')
     print('> Calculating term frequency..')
     cal_tf('shelve/stemmed_dict.json')
     print('> Calculating tf-idf..')
     cal_tf_idf('shelve/tf_dict.json', 'corpus/films_corpus.json')
     print('> Calculating document vector lengths..')
-    cal_cos_norm('shelve/tf_idf_dict.json', 'shelve/stemmed_dict.json', 'shelve/stop_word_list.db')
+    cal_cos_norm('shelve/tf_idf_dict.json', 'shelve/stemmed_dict.json', 'shelve/shelve.db')
     print('> Calculating normalized tf-idf..')
     tf_idf_normalization('shelve/tf_idf_dict.json', 'shelve/cos_norm_list.json', 'shelve/stemmed_dict.json')
     print('Almost done...')

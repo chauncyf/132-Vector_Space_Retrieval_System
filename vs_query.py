@@ -14,14 +14,16 @@ king of sweden
 prince
 a of
 """
+
 import shelve
 from flask import Flask, render_template, request
-from vs_search import dummy_search, dummy_movie_data, dummy_movie_snippet, get_shelve
+from vs_search import dummy_search, dummy_movie_data, dummy_movie_snippet
 
 # Create an instance of the flask application within the appropriate namespace (__name__).
 # By default, the application will be listening for requests on port 5000 and assuming the base
 # directory for the resource is the directory where this module resides.
 app = Flask(__name__, static_folder='static', static_url_path='')
+db = shelve.open('./shelve/shelve.db', flag='r', writeback=True)
 
 
 # Welcome page
@@ -67,9 +69,7 @@ def movie_data(film_id):
 # If this module is called in the main namespace, invoke app.run().
 # This starts the local web service that will be listening for requests on port 5000.
 if __name__ == "__main__":
-    db = shelve.open('./shelve/shelve.db', flag='r', writeback=True)
     app.run()
-    db.close()
 # While you are debugging, set app.debug to True, so that the server app will reload
 # the code whenever you make a change.  Set parameter to false (default) when you are
 # done debugging.

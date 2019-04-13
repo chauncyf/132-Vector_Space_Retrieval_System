@@ -74,16 +74,30 @@
                         variable,
                         similar to the python [i]. #}
 
-                        <li value="{{ (srpn-1)*10 + i + 1 }}" class="mt-3"><h5><a
-                                href="/movie_data/{{ movie_results[i].0 }}">{{
-                            movie_results[i].2
-                            }}</a></h5></li>
+                        <li value="{{ (srpn-1)*10 + i + 1 }}" class="mt-3">
+                            <h5 class="mt-4"><a href="/movie_data/{{ movie_results[i].0 }}">{{ movie_results[i].3 }}</a></h5>
+                        </li>
                         <ul>
-                            <li class="list-unstyled">{{ movie_results[i].3 }}</li>
-                            <small class="font-italic text-sm-right text-muted float-right">
-                                Similarity Score: {{ movie_results[i].1 }}
-                            </small>
+                            <li>{{ movie_results[i].4 }}</li>
+                            <li>
+                                <div class="row justify-content-start">
+                                    <small class="col-auto font-italic text-muted m-0">
+                                        Similarity Score: {{ movie_results[i].1 }}
+                                    </small>
+                                    {% if movie_results[i].2 != [] %}
+                                    <small class="col-auto font-italic text-muted m-0">
+                                        Missing Terms: {{ ', '.join(movie_results[i].2) }}
+                                    </small>
+                                    {% endif %}
+                                </div>
+                            </li>
 
+                            <form action="/results" name="next" method="post" class="col-auto">
+                                <input type="hidden" name="query" value="{{ movie_results[i].4 }}">
+
+                                <input type="submit" value="More Like This" class="btn btn-link float-right p-0">
+                                <input type="hidden" name="page_num" value="1">
+                            </form>
                         </ul>
                         {% endfor %}
                     </doc_id>

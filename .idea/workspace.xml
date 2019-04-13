@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5eee8f99-bf67-4f04-9e04-967fedf5f72f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vs_search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boolean_index.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/boolean_query.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/boolean_search.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/film_corpus.json" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/films_corpus.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/posting_list.db" beforeDir="false" afterPath="$PROJECT_DIR$/shelve/posting_list.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/posting_list.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelve/posting_list.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stemmed_dict.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelve/stemmed_dict.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stop_word_list.db" beforeDir="false" afterPath="$PROJECT_DIR$/shelve/stop_word_list.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/query_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/query_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelve/cos_norm_list.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelve/cos_norm_list.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelve/shelve.db" beforeDir="false" afterPath="$PROJECT_DIR$/shelve/shelve.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelve/tf_idf_dict.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelve/tf_idf_dict.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelve/tf_idf_norm_dict.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelve/tf_idf_norm_dict.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/results_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/results_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vs_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/vs_index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vs_query.py" beforeDir="false" afterPath="$PROJECT_DIR$/vs_query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vs_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/vs_search.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,9 +21,11 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/boolean_retrieval$boolean_query.coverage" NAME="boolean_query Coverage Results" MODIFIED="1551484673744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/vector_space_retrieval$vs_index.coverage" NAME="vs_index Coverage Results" MODIFIED="1553480206800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/vector_space_retrieval$vs_index.coverage" NAME="vs_index Coverage Results" MODIFIED="1555197591655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/boolean_retrieval$indexing.coverage" NAME="indexing Coverage Results" MODIFIED="1553110963504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/vector_space_retrieval$vs_query.coverage" NAME="vs_query Coverage Results" MODIFIED="1553480919960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/vector_space_retrieval$shelve.coverage" NAME="shelve Coverage Results" MODIFIED="1553484217766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7" />
+    <SUITE FILE_PATH="coverage/vector_space_retrieval$boolean_search.coverage" NAME="boolean_search Coverage Results" MODIFIED="1553482289822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/vector_space_retrieval$vs_query.coverage" NAME="vs_query Coverage Results" MODIFIED="1555197649050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/boolean_retrieval$boolean_search.coverage" NAME="boolean_search Coverage Results" MODIFIED="1551122595710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -34,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vs_index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="225" column="35" selection-start-line="225" selection-start-column="35" selection-end-line="225" selection-end-column="35" />
+            <state relative-caret-position="-209">
+              <caret line="144" column="23" selection-start-line="144" selection-start-column="23" selection-end-line="144" selection-end-column="23" />
               <folding>
                 <element signature="e#62#73#0" expanded="true" />
               </folding>
@@ -44,13 +43,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shelve.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="110" selection-start-line="110" selection-end-line="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vs_search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1463">
-              <caret line="77" column="19" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
-              <folding>
-                <element signature="e#68#79#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1406">
+              <caret line="76" column="83" selection-start-line="76" selection-start-column="83" selection-end-line="76" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -58,11 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vs_query.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1053">
-              <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
-              <folding>
-                <element signature="e#320#333#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="167">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -70,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/results_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="82" column="78" selection-start-line="82" selection-start-column="78" selection-end-line="82" selection-end-column="78" />
+            <state relative-caret-position="1425">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -97,7 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>input</find>
       <find>50</find>
       <find>sear</find>
       <find>1</find>
@@ -127,6 +128,7 @@
       <find>c</find>
       <find>dummy_movie_snippet</find>
       <find>shelve</find>
+      <find>cal_cos_score</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -158,10 +160,10 @@
         <option value="$PROJECT_DIR$/boolean_search.py" />
         <option value="$PROJECT_DIR$/templates/query_page.html" />
         <option value="$PROJECT_DIR$/shelve/cos_norm_list2.json" />
-        <option value="$PROJECT_DIR$/vs_index.py" />
         <option value="$PROJECT_DIR$/vs_search.py" />
-        <option value="$PROJECT_DIR$/templates/results_page.html" />
         <option value="$PROJECT_DIR$/vs_query.py" />
+        <option value="$PROJECT_DIR$/templates/results_page.html" />
+        <option value="$PROJECT_DIR$/vs_index.py" />
       </list>
     </option>
   </component>
@@ -179,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,22 +191,13 @@
             <path>
               <item name="vector_space_retrieval" type="b2602c69:ProjectViewProjectNode" />
               <item name="vector_space_retrieval" type="462c0819:PsiDirectoryNode" />
-              <item name="corpus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vector_space_retrieval" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vector_space_retrieval" type="462c0819:PsiDirectoryNode" />
               <item name="shelve" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vector_space_retrieval" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vector_space_retrieval" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,28 +231,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.vs_query">
-    <configuration name="boolean_query" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="boolean_retrieval" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/boolean_query.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="boolean_search" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="boolean_retrieval" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -297,6 +267,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/boolean_index.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="shelve" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="boolean_retrieval" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shelve.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -353,9 +345,9 @@
       <list>
         <item itemvalue="Python.vs_query" />
         <item itemvalue="Python.vs_index" />
-        <item itemvalue="Python.indexing" />
-        <item itemvalue="Python.boolean_query" />
+        <item itemvalue="Python.shelve" />
         <item itemvalue="Python.boolean_search" />
+        <item itemvalue="Python.indexing" />
       </list>
     </recent_temporary>
   </component>
@@ -379,7 +371,9 @@
       <workItem from="1551484237441" duration="4048000" />
       <workItem from="1551562429325" duration="18000" />
       <workItem from="1553110721153" duration="295000" />
-      <workItem from="1553277932597" duration="41281000" />
+      <workItem from="1553277932597" duration="46428000" />
+      <workItem from="1553831240288" duration="231000" />
+      <workItem from="1555197198651" duration="440000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1550174384147</created>
@@ -392,7 +386,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97908000" />
+    <option name="totallyTimeSpent" value="103726000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,19 +398,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-157" width="1889" height="1057" extended-state="6" />
+    <frame x="1440" y="-157" width="1890" height="1057" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12127775" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12445887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33989638" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.29326424" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45284975" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.31398964" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="6" visible="true" weight="0.16683938" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.20103627" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.24248704" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.38549224" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32953367" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32953367" />
@@ -505,14 +499,7 @@
     <entry file="file://$PROJECT_DIR$/indexing_dict.json" />
     <entry file="file://$PROJECT_DIR$/tokenized_dict.json" />
     <entry file="file://$PROJECT_DIR$/movie_text.json" />
-    <entry file="file://$PROJECT_DIR$/corpus/films_corpus.json" />
-    <entry file="file://$PROJECT_DIR$/shelve/posting_list.db">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="121" column="26" lean-forward="true" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shelve/posting_list.db" />
     <entry file="file:///usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_collections_abc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -542,13 +529,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html" />
-    <entry file="file://$PROJECT_DIR$/shelve/stop_word_list.db">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="708" selection-start-line="5" selection-start-column="708" selection-end-line="5" selection-end-column="708" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shelve/stop_word_list.db" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/templating.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -597,20 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/corpus/films_corpus.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -625,13 +592,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shelve/df_dict.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shelve/df_dict.json" />
     <entry file="file://$PROJECT_DIR$/shelve/tf_dict.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258115">
@@ -646,36 +607,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shelve/tf_idf_dict.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret column="162" selection-start-column="147" selection-end-column="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boolean_index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="94" column="18" lean-forward="true" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
-          <folding>
-            <element signature="e#66#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boolean_query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#498#520#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shelve/tf_idf_norm_dict2.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/boolean_index.py" />
+    <entry file="file://$PROJECT_DIR$/boolean_query.py" />
+    <entry file="file://$PROJECT_DIR$/shelve/tf_idf_norm_dict2.json" />
     <entry file="file://$PROJECT_DIR$/templates/query_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -690,13 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shelve/tf_idf_norm_dict.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret column="165" selection-start-column="165" selection-end-column="165" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shelve/posting_list.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -704,29 +631,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shelve/cos_norm_list2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shelve/tf_idf_dict.db">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-246" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shelve/cos_norm_list2.json" />
+    <entry file="file://$PROJECT_DIR$/shelve/tf_idf_dict.db" />
     <entry file="file://$PROJECT_DIR$/shelve/cos_norm_list.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="51604" selection-start-column="51604" selection-end-column="51604" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shelve.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
@@ -787,30 +697,38 @@
       </provider>
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vs_index.py">
+    <entry file="file://$PROJECT_DIR$/shelve/tf_idf_norm_dict.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="225" column="35" selection-start-line="225" selection-start-column="35" selection-end-line="225" selection-end-column="35" />
-          <folding>
-            <element signature="e#62#73#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="19">
+          <caret column="165" selection-start-column="165" selection-end-column="165" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vs_search.py">
+    <entry file="file://$PROJECT_DIR$/shelve/tf_idf_dict.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
-          <caret line="77" column="19" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
-          <folding>
-            <element signature="e#68#79#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="95">
+          <caret column="808" selection-start-column="808" selection-end-column="808" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/results_page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="82" column="78" selection-start-line="82" selection-start-column="78" selection-end-line="82" selection-end-column="78" />
+        <state relative-caret-position="1425">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -824,13 +742,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shelve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vs_index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="144" column="23" selection-start-line="144" selection-start-column="23" selection-end-line="144" selection-end-column="23" />
+          <folding>
+            <element signature="e#62#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vs_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="76" column="83" selection-start-line="76" selection-start-column="83" selection-end-line="76" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vs_query.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1053">
-          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
-          <folding>
-            <element signature="e#320#333#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="167">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
